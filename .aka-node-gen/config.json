@@ -1,0 +1,5 @@
+{
+  "language": "javascript",
+  "module": "common_js",
+  "database": "mongo_db"
+}
