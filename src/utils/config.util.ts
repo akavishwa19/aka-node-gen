@@ -14,12 +14,12 @@ function ensureConfigDir(projectRoot: string): void {
     }
 }
 
-function saveConfig(projectRoot: string, config: Record<string, any>): void {
+function saveConfig(projectRoot: string, config: Record<string, unknown>): void {
     ensureConfigDir(projectRoot);
     fs.writeFileSync(getConfigPath(projectRoot), JSON.stringify(config, null, 2), 'utf-8')
 }
 
-function loadConfig(projectRoot: string): Record<string, any> {
+function loadConfig(projectRoot: string): Record<string, unknown> {
     const configPath = getConfigPath(projectRoot);
     if (fs.existsSync(configPath)) {
         const data = fs.readFileSync(configPath, 'utf-8');
